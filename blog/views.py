@@ -1,6 +1,12 @@
 from django.shortcuts import render
 
+from .models import Post
+
 # Create your views here.
 
 def frontpage(request):
-    return render(request, 'blog/frontpage.html')
+
+    # buscando todos os post no banco
+    posts = Post.objects.all()
+
+    return render(request, 'blog/frontpage.html', {'posts':posts})
