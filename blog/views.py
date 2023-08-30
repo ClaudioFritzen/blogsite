@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from django.http import HttpResponse
+
 from .models import Post
 
 # Create your views here.
@@ -14,5 +16,6 @@ def frontpage(request):
 def post_detail(request, slug):
 
     post = Post.objects.get(slug=slug)
-    return render (request, 'post_detail.html', {'post': post})
+    return render(request,'blog/post_detail.html', {'post':post})
+    
 
