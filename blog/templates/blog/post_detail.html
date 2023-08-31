@@ -12,5 +12,21 @@
 
     <p> {{ post.body }}</p>
 
+    <hr>
+
+    <h2 class=subtitle>Add Comment</h2>
+
+    <form method='post' action='.'>
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <div class='filter'>
+            <div class='control'>
+                <button class='button is-successs'> Submit </button>
+            </div>
+        </div>
+    </form>
+
 
 {% endblock content %}
