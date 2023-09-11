@@ -4,13 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Django Chat!</title>
+
+    <!-- importação da bulma-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!--importação do bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
 
   <section class="header">
     <nav class="navbar is-info">
         <div class="nav-brand"></div>
+            <a href="{% url "home" %}" class="navbar-item"> <strong> Home|Blog Django </strong></a>
+            <a href="https://www.google.com.br/" class="navbar-item"> <strong> New Post </strong></a>
             <a href="/" class="navbar-item"> <strong> Blog Django Body</strong></a>
     </nav>
   </section>
