@@ -35,7 +35,7 @@ configure as variaveis de ambientação
 # Cadrastre na are Administrativa
 
 
-#### manuntencão das minhas ideias
+#### manuntencão das minhas ideias 
 
 Para criarmos um post, devemos passar as seguintes informações 
 
@@ -46,3 +46,8 @@ titilo
 
 intro
 body
+
+
+## Para criamos um novo post
+ devemos criar um formulario para o utilizador 
+ preenche-lo

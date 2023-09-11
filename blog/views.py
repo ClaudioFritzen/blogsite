@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 from .models import Post
 
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 # Create your views here.
 
@@ -43,6 +43,10 @@ def home(request):
 
 def new_post(request):
     if request.method == 'GET':
-        return HttpResponse('hola mundo do post noovo!')
+        return render(request, 'blog/new_post.html')
+    
+    elif request.method == 'POST':
+        form = PostForm(request.POST)
+
     
         
