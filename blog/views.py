@@ -35,4 +35,14 @@ def post_detail(request, slug):
  
 # função page home
 def home(request):
-    return HttpResponse('Holla mundo!!')
+    return render(request, 'blog/home.html')
+
+
+
+#3 new post
+
+def new_post(request):
+    if request.method == 'GET':
+        return HttpResponse('hola mundo do post noovo!')
+    
+        

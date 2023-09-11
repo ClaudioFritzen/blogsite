@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from blog.views import frontpage, post_detail, home
+from blog.views import frontpage, post_detail, home, new_post
 
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     path('', frontpage, name='frontpage'),
     path('<slug:slug>/', post_detail, name='post_detail'),
     path('home', home, name='home'),
+    path('new_post', new_post, name='new_post'),
 
 ]

@@ -35,3 +35,14 @@ configure as variaveis de ambientação
 # Cadrastre na are Administrativa
 
 
+#### manuntencão das minhas ideias
+
+Para criarmos um post, devemos passar as seguintes informações 
+
+titilo
+
+# slug
+    # no slug quero criar uma função que pega o titulo, e remove espaçoes em brancos e substituiu por underscore! ou hifen
+
+intro
+body
