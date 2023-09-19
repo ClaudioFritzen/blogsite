@@ -42,15 +42,6 @@ def home(request):
 #3 new post
 
 def new_post(request):
+    form = PostForm()
 
-    if request.method == 'POST':
-        form = PostForm(request.POST)
-
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.save()
-            return redirect('frontpage')
-        else:
-            form = PostForm()
-
-    return render(request, 'blog/post_detail.html', )#{'post': post, 'form': form})
+    return render(request, 'blog/post_detail.html', {'form': form} )#{'post': post, 'form': form})
