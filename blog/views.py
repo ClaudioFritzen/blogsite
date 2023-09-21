@@ -44,4 +44,9 @@ def home(request):
 def new_post(request):
     form = PostForm()
 
+    if form.is_valid():
+        form.save()
+
+        
+        
     return render(request, 'blog/post_detail.html', {'form': form} )#{'post': post, 'form': form})

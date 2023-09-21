@@ -51,3 +51,13 @@ body
 ## Para criamos um novo post
  devemos criar um formulario para o utilizador 
  preenche-lo
+
+
+
+
+
+ ## deploy com o railways
+
+ # links de referencias
+https://fly.io/
+https://fly.io/docs/django/getting-started/existing/
