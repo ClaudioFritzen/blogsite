@@ -45,7 +45,7 @@ def new_post(request):
     
     if request.method == "GET":
 
-        return HttpResponse('tipo noco')
+        return render(request, 'blog/new_post.html')
     
     elif request.method =='POST':
 
