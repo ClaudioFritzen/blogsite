@@ -42,11 +42,13 @@ def home(request):
 #3 new post
 
 def new_post(request):
-    form = PostForm()
+    
+    if request.method == "GET":
 
-    if form.is_valid():
-        form.save()
+        return HttpResponse('tipo noco')
+    
+    elif request.method =='POST':
 
-        
-        
-    return render(request, 'blog/post_detail.html', {'form': form} )#{'post': post, 'form': form})
+        return HttpResponse('modo post')
+    
+    return render(request, 'blog/new_post.html')
