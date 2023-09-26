@@ -61,3 +61,27 @@ body
  # links de referencias
 https://fly.io/
 https://fly.io/docs/django/getting-started/existing/
+
+
+## para se conectar ao banco utilizamos apenas 
+pip install dj-database-url
+
+pip install psycopg2-binary
+
+pip install psycopg2
+
+
+faremos a importação no settings
+
+import dj_database_url
+
+
+paremos o conector
+
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+DATABASE_URL = os.getenv('DATABASE_URL')
+DATABASES = {
+    "default": dj_database_url.config(default=DATABASE_URL)
+
+}
