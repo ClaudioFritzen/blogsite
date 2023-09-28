@@ -85,3 +85,22 @@ DATABASES = {
     "default": dj_database_url.config(default=DATABASE_URL)
 
 }
+
+
+## deploy no railway
+link util
+https://dev.to/osahenru/using-railway-app-to-deploy-your-django-project-3ah1
+
+
+configure os settings
+
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+
+## rode os coletaveis
+py manage.py collectstatic
+
+instale o gunicorn
+
+crie o Procfile e o runtime
