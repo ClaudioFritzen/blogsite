@@ -48,7 +48,8 @@ def new_post(request):
         return render(request, 'blog/new_post.html')
     
     elif request.method =='POST':
-
+        title = request.POST.get('titulo')
+        print(title)
         return HttpResponse('modo post')
     
     return render(request, 'blog/new_post.html')

@@ -3,7 +3,8 @@
 {% block content %}
 
 <h2 class=subtitle>New Post</h2>
-        <form action="#">
+        <form action="{% url "frontpage" %}"> {% csrf_token %}
+
                 <div class="field">
                         <label class="label">Titulo</label>
                         <div class="control">
@@ -26,7 +27,6 @@
                         </div>
                         <br>
                 </div>
-
         </form>
 
         <div class="control">
