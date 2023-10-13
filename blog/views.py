@@ -48,5 +48,24 @@ def new_post(request):
         return render(request,'blog/new_post.html')
     
     elif request.method == "POST":
+
+        title = request.POST.get('title')
+        slug = request.POST.get('slug')
+        intro = request.POST.get('intro') 
+        body = request.POST.get('body') 
+
+        try:
+            ## SLUG deve ser unico
+            new_post = Post.objects.create(
+                title=title,
+                slug=slug,
+                intro=intro,
+                body=body
+            )
+            
+        except:
+            return HttpResponse('Falha ao conectar com o banco! tente mais tarde!')
+
+        print(title, slug, intro, body)
     
         return HttpResponse('Metodo POST')
