@@ -45,11 +45,8 @@ def new_post(request):
     
     if request.method == "GET":
 
-        return render(request, 'blog/new_post.html')
+        return render(request,'blog/new_post.html')
     
-    elif request.method =='POST':
-        title = request.POST.get('titulo')
-        print(title)
-        return HttpResponse('modo post')
+    elif request.method == "POST":
     
-    return render(request, 'blog/new_post.html')
+        return HttpResponse('Metodo POST')
