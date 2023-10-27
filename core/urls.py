@@ -15,7 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
 
 from blog.views import frontpage, post_detail, home, new_post
 
@@ -26,5 +27,6 @@ urlpatterns = [
     path('<slug:slug>/', post_detail, name='post_detail'),
     path('home', home, name='home'),
     path('new_post', new_post, name='new_post'),
+    path('cadastro/', include('cadastro.urls')),
 
 ]
